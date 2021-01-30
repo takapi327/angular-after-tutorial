@@ -6,10 +6,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }     from './app.component';
 
-import { UserListComponent }       from './user-list.component';
-import { UserListItemComponent }   from './user-list-item.component';
-import { UserListFilterComponent } from './user-list-filter.component';
-import { UserDetailPageComponent } from './user-detail-page.component';
+import { UserListComponent }       from './view/user-list/user-list.component';
+import { UserListItemComponent }   from './view/user-list-item/user-list-item.component';
+import { UserListFilterComponent } from './view/user-list-filter/user-list-filter.component';
+import { UserDetailPageComponent } from './view/user-detail-page/user-detail-page.component';
 
 @NgModule({
   declarations: [

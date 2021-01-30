@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, EventEmitter }      from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, takeUntil, distinctUntilChanged } from 'rxjs/operators';
-import { UserDetailUsecase } from './user-detai.usecase';
+import { UserDetailUsecase } from '../../usecase/user-detai.usecase';
 
 @Component({
   templateUrl: './user-detail-page.component.html',

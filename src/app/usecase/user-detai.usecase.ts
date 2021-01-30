@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { UserApiService } from './user-api.service';
-import { Store } from './store.service';
+import { UserApiService } from '../service/user-api.service';
+import { Store } from '../service/store.service';
 
 @Injectable({ providedIn: 'root' })
 export class UserDetailUsecase {

@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { takeUntil } from 'rxjs/operators';
-import { UserListFilter } from './state';
+import { UserListFilter } from '../../state';
 
 @Component({
   selector:    'user-list-filter',

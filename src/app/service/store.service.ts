@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, queueScheduler } from 'rxjs';
 import { map, distinctUntilChanged } from 'rxjs/operators';
-import { State, initialState } from './state';
+import { State, initialState } from '../state';
 
 @Injectable({ providedIn: 'root' })
 export class Store {
