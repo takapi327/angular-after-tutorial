@@ -9,13 +9,15 @@ import { AppComponent }     from './app.component';
 import { UserListComponent }       from './user-list.component';
 import { UserListItemComponent }   from './user-list-item.component';
 import { UserListFilterComponent } from './user-list-filter.component';
+import { UserDetailPageComponent } from './user-detail-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserListItemComponent,
-    UserListFilterComponent
+    UserListFilterComponent,
+    UserDetailPageComponent
   ],
   imports: [
     BrowserModule,
