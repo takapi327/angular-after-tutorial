@@ -5,9 +5,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }     from './app.component';
 
+import { UserListComponent }     from './user-list.component';
+import { UserListItemComponent } from './user-list-item.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserListComponent,
+    UserListItemComponent
   ],
   imports: [
     BrowserModule,
