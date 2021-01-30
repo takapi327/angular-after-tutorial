@@ -1,12 +1,11 @@
 import { Injectable }      from '@angular/core';
 import { HttpClient }      from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
 import { map }             from 'rxjs/operators';
 import { Store }           from './store.service';
 import { User }            from './user';
 
 @Injectable({ providedIn: 'root' })
-export class UserService {
+export class UserListUsecase {
 
   constructor(
     private http:  HttpClient,
