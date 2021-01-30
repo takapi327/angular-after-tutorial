@@ -1,6 +1,7 @@
 import { Component }       from '@angular/core';
 import { UserListFilter }  from './state';
 import { UserListUsecase } from './usecase/user-list.usecase';
+import { DataService }     from './service/data.service';
 
 @Component({
   selector:    'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   userListFilter$ = this.userList.filter$;
 
   constructor(
-    private userList: UserListUsecase
+    private userList: UserListUsecase,
+    private dataService: DataService
   ) {}
 
   ngOnInit() {
@@ -22,6 +24,11 @@ export class AppComponent {
 
   setUserListFilter(value: UserListFilter) {
     this.userList.setNameFilter(value.nameFilter)
+  }
+
+  updateValue() {
+    const value = new Date().toISOString();
+    this.dataService.setValue(value)
   }
 
 }
