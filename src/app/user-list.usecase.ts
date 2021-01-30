@@ -1,15 +1,14 @@
 import { Injectable }      from '@angular/core';
-import { HttpClient }      from '@angular/common/http';
 import { map }             from 'rxjs/operators';
 import { Store }           from './store.service';
-import { User }            from './user';
+import { UserApiService }  from './user-api.service';
 
 @Injectable({ providedIn: 'root' })
 export class UserListUsecase {
 
   constructor(
-    private http:  HttpClient,
-    private store: Store
+    private store:   Store,
+    private userApi: UserApiService
   ) {}
 
   get users$() {
@@ -29,10 +28,7 @@ export class UserListUsecase {
   }
 
   async fetchUsers() {
-    const users = await this.http
-      .get<{ data: User[] }>('https://reqres.in/api/users')
-      .pipe(map(res => res.data))
-      .toPromise();
+    const users = await this.userApi.getAllUsers();
 
     this.store.update(state => ({
       ...state,
