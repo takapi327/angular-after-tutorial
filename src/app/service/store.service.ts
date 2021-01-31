@@ -18,6 +18,7 @@ export class Store {
   select<T>(selector: (state: State) => T) {
     return this._state$.pipe(
       map(selector),
+      // 前回の値から変更があるときのみ処理する
       distinctUntilChanged(),
     );
   }

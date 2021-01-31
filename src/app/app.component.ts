@@ -23,12 +23,12 @@ export class AppComponent {
   }
 
   setUserListFilter(value: UserListFilter) {
-    this.userList.setNameFilter(value.nameFilter)
+    this.userList.setNameFilter(value.nameFilter);
   }
 
   updateValue() {
     const value = new Date().toISOString();
-    this.dataService.setValue(value)
+    this.dataService.setValue(value);
   }
 
 }

@@ -11,13 +11,18 @@ import { UserListItemComponent }   from './view/user-list-item/user-list-item.co
 import { UserListFilterComponent } from './view/user-list-filter/user-list-filter.component';
 import { UserDetailPageComponent } from './view/user-detail-page/user-detail-page.component';
 
+import { ExplicitSubscribeComponent } from './explicit-subscribe.component';
+import { AsyncPipeComponent } from './async-pipe.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserListItemComponent,
     UserListFilterComponent,
-    UserDetailPageComponent
+    UserDetailPageComponent,
+    ExplicitSubscribeComponent,
+    AsyncPipeComponent
   ],
   imports: [
     BrowserModule,

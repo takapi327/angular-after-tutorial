@@ -10,8 +10,7 @@ type State = {
   selector: 'app-async-pipe',
   template: `
     <ng-container *ngIf="state$ | async as state">
-      <div>1. {{ state.value }}</div>
-      <div>2. {{ state.value }}</div>
+      <div>{{ state.value }}</div>
     </ng-container>
   `,
 })
@@ -24,7 +23,7 @@ export class AsyncPipeComponent {
   ) {
     this.state$ = combineLatest(
       [ this.dataService.valueChanges ],
-      ([value]) => ({ value }),
+      ([value]) => ({ value })
     );
   }
 }
